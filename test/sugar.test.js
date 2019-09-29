@@ -3,7 +3,7 @@ const setUpGlobalObject = require("../lib/sugar");
 // Invoking this function adds the new methods to the Global Object
 setUpGlobalObject();
 
-describe("Object.size", () => {
+describe.only("Object.size", () => {
   test("returns the correct size when given an object", () => {
     expect(
       Object.size({
@@ -54,7 +54,7 @@ describe.only("Object.min", () => {
   });
 });
 
-describe("Object.max", () => {
+describe.only("Object.max", () => {
   test("returns the largest number of all values in an object", () => {
     expect(
       Object.max({
@@ -76,7 +76,7 @@ describe("Object.max", () => {
   });
 });
 
-describe("Object.clone", () => {
+describe.only("Object.clone", () => {
   test("returns a copy of the object", () => {
     const person1 = {
       name: "Sally",
@@ -90,7 +90,7 @@ describe("Object.clone", () => {
   });
 });
 
-describe("Object.get", () => {
+describe.only("Object.get", () => {
   test("returns the value for the given key", () => {
     expect(
       Object.get(
@@ -136,7 +136,7 @@ describe("Object.get", () => {
   });
 });
 
-describe("Object.has", () => {
+describe.only("Object.has", () => {
   test("returns true if the object has the give key", () => {
     const obj1 = { name: "Sally", location: "Leeds" };
     expect(Object.has(obj1, "name")).toBe(true);
@@ -161,7 +161,7 @@ describe("Object.has", () => {
   });
 });
 
-describe("Object.sum", () => {
+describe.only("Object.sum", () => {
   test("returns the sum of all the values when all values are numbers", () => {
     const obj = {
       a: 1,
@@ -199,7 +199,7 @@ describe("Object.sum", () => {
   });
 });
 
-describe("Object.invert", () => {
+describe.only("Object.invert", () => {
   test("returns a new object which is the inversion of the given object", () => {
     const original = {
       name: "Sally",
