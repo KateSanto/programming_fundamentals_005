@@ -3,7 +3,7 @@ const setUpGlobalObject = require("../lib/sugar");
 // Invoking this function adds the new methods to the Global Object
 setUpGlobalObject();
 
-describe.only("Object.size", () => {
+describe("Object.size", () => {
   test("returns the correct size when given an object", () => {
     expect(
       Object.size({
@@ -32,7 +32,7 @@ describe.only("Object.size", () => {
   });
 });
 
-describe.only("Object.min", () => {
+describe("Object.min", () => {
   test("returns the smallest number of all values in an object", () => {
     expect(
       Object.min({
@@ -54,7 +54,7 @@ describe.only("Object.min", () => {
   });
 });
 
-describe.only("Object.max", () => {
+describe("Object.max", () => {
   test("returns the largest number of all values in an object", () => {
     expect(
       Object.max({
@@ -76,7 +76,7 @@ describe.only("Object.max", () => {
   });
 });
 
-describe.only("Object.clone", () => {
+describe("Object.clone", () => {
   test("returns a copy of the object", () => {
     const person1 = {
       name: "Sally",
@@ -90,7 +90,7 @@ describe.only("Object.clone", () => {
   });
 });
 
-describe.only("Object.get", () => {
+describe("Object.get", () => {
   test("returns the value for the given key", () => {
     expect(
       Object.get(
@@ -136,7 +136,7 @@ describe.only("Object.get", () => {
   });
 });
 
-describe.only("Object.has", () => {
+describe("Object.has", () => {
   test("returns true if the object has the give key", () => {
     const obj1 = { name: "Sally", location: "Leeds" };
     expect(Object.has(obj1, "name")).toBe(true);
@@ -161,7 +161,7 @@ describe.only("Object.has", () => {
   });
 });
 
-describe.only("Object.sum", () => {
+describe("Object.sum", () => {
   test("returns the sum of all the values when all values are numbers", () => {
     const obj = {
       a: 1,
@@ -199,7 +199,7 @@ describe.only("Object.sum", () => {
   });
 });
 
-describe.only("Object.invert", () => {
+describe("Object.invert", () => {
   test("returns a new object which is the inversion of the given object", () => {
     const original = {
       name: "Sally",
@@ -234,7 +234,7 @@ describe.only("Object.invert", () => {
   });
 });
 
-describe.only("Object.addAll", () => {
+describe("Object.addAll", () => {
   test("Creates a new object out of all the objects in an array", () => {
     const objects = [{ a: 1 }, { b: 3 }, { c: "foo" }];
 
@@ -272,7 +272,7 @@ describe.only("Object.addAll", () => {
   });
 });
 
-describe.only("Object.find", () => {
+describe("Object.find", () => {
   test("returns the found value if the object contains a value that matches the matcher function", () => {
     function matcherFunc(val) {
       return val > 99;
